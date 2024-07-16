@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 	},
 	routeRules: {
 		'/leaderboard-with-path-params/**': { swr: true },
-		'/leaderboard-with-query/**': { swr: true, headers: { 'Netlify-Vary': 'query=type' } },
+		'/leaderboard-with-query/**': { swr: true },
 	},
 	compatibilityDate: '2024-04-03',
 	devtools: { enabled: true },
