@@ -31,7 +31,9 @@
 <script setup lang="ts">
 const leaderboardType = useRouteParams<string>('type');
 
-const { data } = await useFetch('/api/leaderboard');
+const { data } = await useFetch('/api/leaderboard', {
+	getCachedData: (key, nuxtApp) => nuxtApp.payload.data[key] || nuxtApp.static.data[key],
+});
 
 const leaderboardTypes = computed(() => Object.keys(data.value || {}));
 
