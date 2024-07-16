@@ -4,8 +4,8 @@ export default defineNuxtConfig({
 		head: { htmlAttrs: { style: 'background-color: #191F25; color: #ffffff' } },
 	},
 	routeRules: {
-		'/leaderboard-with-path-params/**': { swr: 60 },
-		'/leaderboard-with-query/**': { swr: 60, headers: { 'Netlify-Vary': 'query=type' } },
+		'/leaderboard-with-path-params/**': { swr: true },
+		'/leaderboard-with-query/**': { swr: true, headers: { 'Netlify-Vary': 'query=type' } },
 	},
 	compatibilityDate: '2024-04-03',
 	devtools: { enabled: true },

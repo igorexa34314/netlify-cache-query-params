@@ -9,7 +9,7 @@ export default defineCachedEventHandler(
 			return acc;
 		}, {} as Record<string, ReturnType<typeof generateRandomUserPoints>>);
 	},
-	{ maxAge: 30 }
+	{ maxAge: 60 * 3 }
 );
 
 function generateRandomUserPoints(count: number) {
